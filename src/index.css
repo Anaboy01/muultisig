@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.boom{
+    box-shadow: rgba(10, 46, 61, 0.527) 0px 7px 29px 0px;
+
+}
+

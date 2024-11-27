@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
       <section className="flex-1 p-8">
             {children}
       </section>
-      <footer className="w-full h-20 flex justify-center items-center bg-stone-800">
+      <footer className="w-full h-20 flex justify-center items-center bg-zinc-700">
       <p className="text-stone-300">Decisions &copy; 2024. All Right Reserved</p>
       </footer>
       <ToastContainer theme="dark" position="bottom-right"/>
