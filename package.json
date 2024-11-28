@@ -10,15 +10,24 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@radix-ui/react-icons": "^1.3.2",
     "@radix-ui/themes": "^3.1.6",
+    "@react-three/drei": "^9.117.3",
+    "@react-three/fiber": "^8.17.10",
     "@reown/appkit": "^1.5.2",
     "@reown/appkit-adapter-ethers": "^1.5.2",
     "@reown/appkit-siwe": "^1.5.2",
     "ethers": "^6.13.4",
     "ethers-decode-error": "^2.1.3",
+    "framer-motion": "^11.12.0",
+    "lucide-react": "^0.462.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-toastify": "^10.0.6"
+    "react-particles": "^2.12.2",
+    "react-router-dom": "^7.0.1",
+    "react-toastify": "^10.0.6",
+    "three": "^0.170.0",
+    "tsparticles": "^3.5.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

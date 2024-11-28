@@ -1,9 +1,18 @@
 import { AlertDialog, Box, Button, Card, Dialog, Flex, Text, TextArea, TextField } from "@radix-ui/themes"
 import { useState } from "react";
+import useApproveTxn from "../hooks/useApproveTxn";
 
 const TransactionCard = ({transaction, index}) => {
- const {id, amount, signersCount, reciever, isExecuted, txCreator } = transaction;
+    const handleApprovetxn = useApproveTxn()
+ const {id, amount, signersCount, receiver, isExecuted, txCreator } = transaction;
+
+
+  const handleApproval = (value) => {
+    const id = Number(value);
+    handleApprovetxn(id);
+}
   return (
+    
     <div>
       
         <Box className="w-full">
@@ -20,7 +29,7 @@ const TransactionCard = ({transaction, index}) => {
                         Reciever
                     </Text>
                     <Text as="div" color="gray" size="2">
-                       To: {reciever}
+                        {receiver}
                     </Text>
                     <Text as="div" size="2" weight="bold">
                         Number of Approval
@@ -34,16 +43,11 @@ const TransactionCard = ({transaction, index}) => {
                     <Text as="div" color="gray" size="2">
                         {txCreator} 
                     </Text>
-                    {/* <Text as="div" size="2" weight="bold">
-                        Number of Approval
-                    </Text>
-                    <Text as="div" color="gray" size="2">
-                        {signersCount} Approvals
-                    </Text> */}
+                    
                 </Flex>
                 {isExecuted == true ?
                 <Button disabled color="bronze">Executed</Button>:
-                <Button color="gold">Approve</Button>
+                <Button color="gold" onClick={() => handleApproval(id)} variant="solid">Approve</Button>
             }
 
                

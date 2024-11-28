@@ -1,7 +1,12 @@
 import { AlertDialog, Box, Button, Card, Dialog, Flex, Text, TextArea, TextField } from "@radix-ui/themes"
+import useRemoveSigner from "../hooks/useRemoveSigner";
 
 const Signers = ({signer, index}) => {
-    console.log(signer)
+    const handleRemoveSigner = useRemoveSigner()
+    const handleRemoval = (value) => {
+        const index = Number(value);
+        handleRemoveSigner(index);
+    }
     
   return (
     <Box className="w-full">
@@ -18,7 +23,7 @@ const Signers = ({signer, index}) => {
 
        
 
-        <Button color="red" >Remove</Button>
+        <Button color="red" onClick={() => handleRemoval(index)}>Remove</Button>
         </Flex>
         
 

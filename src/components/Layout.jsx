@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
         <h3 className="text-lg font-medium text-[#0cc2ff]">Decisions</h3>
         <appkit-button />
       </nav>
-      <section className="flex-1 p-8">
+      <section className="flex-1">
             {children}
       </section>
       <footer className="w-full h-20 flex justify-center items-center bg-zinc-700">
